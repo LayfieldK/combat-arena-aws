@@ -1,0 +1,29 @@
+{
+  "name": "space-arena",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {
+    "async-await-jasmine": "^0.0.2",
+    "babel": "^6.23.0",
+    "inversify": "^5.0.1",
+    "jasmine": "^3.5.0",
+    "typemoq": "^2.1.0",
+    "typescript": "^3.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LayfieldK/space-arena.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LayfieldK/space-arena/issues"
+  },
+  "homepage": "https://github.com/LayfieldK/space-arena#readme"
+}
