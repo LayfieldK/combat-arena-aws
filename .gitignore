@@ -4,4 +4,10 @@ jspm_packages
 
 # Serverless directories
 .serverless
+
+#vscode workspace
 *.code-workspace
+
+# output js/ts
+lib
+
