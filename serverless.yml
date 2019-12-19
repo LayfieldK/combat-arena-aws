@@ -48,8 +48,18 @@ provider:
 #  environment:
 #    variable1: value1
 
+plugins:
+  - serverless-webpack
+
+custom:
+  webpack:
+    webpackConfig: 'webpack.config.js'
+    packager: 'npm'
+    includeModules: true
+    keepOutputDirectory: true
 # you can add packaging information here
-#package:
+package:
+  individually: true
 #  include:
 #    - include-me.js
 #    - include-me-dir/**
@@ -59,7 +69,7 @@ provider:
 
 functions:
   hello:
-    handler: lib/handler.hello
+    handler: src/handlers/handler.hello
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
