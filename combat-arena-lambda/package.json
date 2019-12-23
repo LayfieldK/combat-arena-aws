@@ -1,5 +1,5 @@
 {
-  "name": "space-arena-lambda",
+  "name": "combat-arena-lambda",
   "version": "1.0.0",
   "description": "",
   "main": "lib/handler.js",
@@ -47,13 +47,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LayfieldK/space-arena.git"
+    "url": "git+https://github.com/LayfieldK/combat-arena.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LayfieldK/space-arena/issues"
+    "url": "https://github.com/LayfieldK/combat-arena/issues"
   },
-  "homepage": "https://github.com/LayfieldK/space-arena#readme"
+  "homepage": "https://github.com/LayfieldK/combat-arena#readme"
 }
