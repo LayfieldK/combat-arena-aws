@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Combatant } from '../types/combatant';
+import { COMBATANTS } from '../mock-combatants';
+
 
 @Component({
   selector: 'app-combatants',
@@ -7,10 +9,12 @@ import { Combatant } from '../types/combatant';
   styleUrls: ['./combatants.component.css']
 })
 export class CombatantsComponent implements OnInit {
-  combatant: Combatant = {
-    id: 1,
-    name: 'Windstorm'
-  };
+  combatants = COMBATANTS;
+  selectedCombatant: Combatant;
+
+  onSelect(combatant: Combatant): void {
+    this.selectedCombatant = combatant;
+  }
 
   constructor() { }
 
