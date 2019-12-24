@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Combatant } from '../types/combatant';
-import { COMBATANTS } from '../mock-combatants';
+import { CombatantService } from '../combatant.service';
 
 
 @Component({
@@ -9,17 +9,22 @@ import { COMBATANTS } from '../mock-combatants';
   styleUrls: ['./combatants.component.css']
 })
 export class CombatantsComponent implements OnInit {
-  combatants = COMBATANTS;
+  combatants: Combatant[];
   selectedCombatant: Combatant;
 
   onSelect(combatant: Combatant): void {
     this.selectedCombatant = combatant;
   }
 
-  constructor() { }
+  constructor(private combatantService: CombatantService) { }
 
   ngOnInit() {
+    this.getCombatants();
+  }
 
+  getCombatants(): void {
+    this.combatantService.getCombatants()
+      .subscribe(combatants => this.combatants = combatants);
   }
 
 }

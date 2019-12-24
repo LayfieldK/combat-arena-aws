@@ -13,6 +13,7 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { CombatantsComponent } from './combatants/combatants.component';
 import { CombatantDetailComponent } from './combatant-detail/combatant-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
 declarations: [
@@ -21,7 +22,8 @@ declarations: [
   SecondComponent,
   MenuComponent,
   CombatantsComponent,
-  CombatantDetailComponent
+  CombatantDetailComponent,
+  MessagesComponent
 ],
 imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
