@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
@@ -10,13 +11,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CombatantsComponent } from './combatants/combatants.component';
 
 @NgModule({
 declarations: [
   AppComponent,
   FirstComponent,
   SecondComponent,
-  MenuComponent
+  MenuComponent,
+  CombatantsComponent
 ],
 imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -24,7 +27,8 @@ imports: [
   HttpClientModule,
   CommonModule,
   TransferHttpCacheModule,
-  NgtUniversalModule
+  NgtUniversalModule,
+  FormsModule
 ],
 providers: [],
 bootstrap: [AppComponent]

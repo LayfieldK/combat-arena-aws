@@ -8,16 +8,17 @@ import { isPlatformBrowser, DOCUMENT } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'combat-arena-site';
-public ngOnInit(): void {
-    if (!isPlatformBrowser(this.platformId)) {
-        const bases = this.document.getElementsByTagName('base');
+  title = 'Combat Arena';
 
-        if (bases.length > 0) {
-            bases[0].setAttribute('href', environment.baseHref);
-        }
-    }
-}
+  public ngOnInit(): void {
+      if (!isPlatformBrowser(this.platformId)) {
+          const bases = this.document.getElementsByTagName('base');
+
+          if (bases.length > 0) {
+              bases[0].setAttribute('href', environment.baseHref);
+          }
+      }
+  }
 
 
  constructor(@Inject(PLATFORM_ID) private platformId: any, @Inject(DOCUMENT) private document: any) {}
