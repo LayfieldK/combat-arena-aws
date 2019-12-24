@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { CombatantsComponent } from './combatants/combatants.component';
+import { CombatantDetailComponent } from './combatant-detail/combatant-detail.component';
 
 @NgModule({
 declarations: [
@@ -19,7 +20,8 @@ declarations: [
   FirstComponent,
   SecondComponent,
   MenuComponent,
-  CombatantsComponent
+  CombatantsComponent,
+  CombatantDetailComponent
 ],
 imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
