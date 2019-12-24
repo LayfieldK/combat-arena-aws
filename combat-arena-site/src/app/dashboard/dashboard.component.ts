@@ -2,14 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Combatant } from '../types/combatant';
 import { CombatantService } from '../combatant.service';
 
-
 @Component({
-  selector: 'app-combatants',
-  templateUrl: './combatants.component.html',
-  styleUrls: ['./combatants.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: [ './dashboard.component.css' ]
 })
-export class CombatantsComponent implements OnInit {
-  combatants: Combatant[];
+export class DashboardComponent implements OnInit {
+  combatants: Combatant[] = [];
 
   constructor(private combatantService: CombatantService) { }
 
@@ -19,7 +18,6 @@ export class CombatantsComponent implements OnInit {
 
   getCombatants(): void {
     this.combatantService.getCombatants()
-      .subscribe(combatants => this.combatants = combatants);
+      .subscribe(combatants => this.combatants = combatants.slice(1, 5));
   }
-
 }

@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
+import { RouterModule, Routes } from '@angular/router';
+import { CombatantsComponent } from './combatants/combatants.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CombatantDetailComponent } from './combatant-detail/combatant-detail.component';
+
+// leaving this here, commented out, reminding myself that it can be done this way
+// const routes: Routes = [
+//   { path: '', redirectTo: '/combatants', pathMatch: 'full' },
+//   { path: 'combatants', component: CombatantsComponent }
+// ];
 
 @NgModule({
  imports: [
    RouterModule.forRoot([
-     { path: '', redirectTo: '/firstComponent', pathMatch: 'full' },
-     { path: 'firstComponent', component: FirstComponent },
-     { path: 'secondComponent', component: SecondComponent }
+     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+     { path: 'combatants', component: CombatantsComponent },
+     { path: 'dashboard', component: DashboardComponent },
+     { path: 'detail/:id', component: CombatantDetailComponent },
    ])
  ],
  exports: [ RouterModule ]

@@ -15,4 +15,9 @@ export class CombatantService {
     this.messageService.add('CombatantService: fetched combatants');
     return of(COMBATANTS);
   }
+
+  getCombatant(id: number): Observable<Combatant> {
+    this.messageService.add(`CombatantService: fetched combatant id=${id}`);
+    return of(COMBATANTS.find(combatant => combatant.id === id));
+  }
 }

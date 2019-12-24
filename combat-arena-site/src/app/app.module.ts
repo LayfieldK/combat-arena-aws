@@ -14,6 +14,7 @@ import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { CombatantsComponent } from './combatants/combatants.component';
 import { CombatantDetailComponent } from './combatant-detail/combatant-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
 declarations: [
@@ -23,7 +24,8 @@ declarations: [
   MenuComponent,
   CombatantsComponent,
   CombatantDetailComponent,
-  MessagesComponent
+  MessagesComponent,
+  DashboardComponent
 ],
 imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
