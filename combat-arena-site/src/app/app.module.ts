@@ -13,13 +13,18 @@ import { CombatantDetailComponent } from './combatant-detail/combatant-detail.co
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { CombatantSearchComponent } from './combatant-search/combatant-search.component';
+
 @NgModule({
 declarations: [
   AppComponent,
   CombatantsComponent,
   CombatantDetailComponent,
   MessagesComponent,
-  DashboardComponent
+  DashboardComponent,
+  CombatantSearchComponent
 ],
 imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -28,7 +33,13 @@ imports: [
   CommonModule,
   TransferHttpCacheModule,
   NgtUniversalModule,
-  FormsModule
+  FormsModule,
+  // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+  // and returns simulated server responses.
+  // Remove it when a real server is ready to receive requests.
+  HttpClientInMemoryWebApiModule.forRoot(
+    InMemoryDataService, { dataEncapsulation: false }
+  )
 ],
 providers: [],
 bootstrap: [AppComponent]

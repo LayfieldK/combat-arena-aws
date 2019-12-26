@@ -22,4 +22,18 @@ export class CombatantsComponent implements OnInit {
       .subscribe(combatants => this.combatants = combatants);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.combatantService.addCombatant({ name } as Combatant)
+      .subscribe(combatant => {
+        this.combatants.push(combatant);
+      });
+  }
+
+  delete(combatant: Combatant): void {
+    this.combatants = this.combatants.filter(h => h !== combatant);
+    this.combatantService.deleteCombatant(combatant).subscribe();
+  }
+
 }

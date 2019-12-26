@@ -1,8 +1,19 @@
 <h2>Combatants</h2>
+<div>
+    <label>Combatant name:
+        <input #combatantName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(combatantName.value); combatantName.value=''">
+        add
+    </button>
+</div>
 <ul class="combatants">
   <li *ngFor="let combatant of combatants" >
     <a routerLink="/detail/{{combatant.id}}">
         <span class="badge">{{combatant.id}}</span> {{combatant.name}}
     </a>
+    <button class="delete" title="delete combatant"
+        (click)="delete(combatant)">x</button>
   </li>
 </ul>

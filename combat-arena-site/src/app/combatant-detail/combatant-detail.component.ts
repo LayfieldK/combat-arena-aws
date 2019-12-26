@@ -33,4 +33,9 @@ export class CombatantDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.combatantService.updateCombatant(this.combatant)
+      .subscribe(() => this.goBack());
+  }
+
 }
