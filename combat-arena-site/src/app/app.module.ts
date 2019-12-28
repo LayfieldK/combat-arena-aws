@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CombatantSearchComponent } from './combatant-search/combatant-search.component';
 
 @NgModule({
@@ -31,6 +32,7 @@ imports: [
   AppRoutingModule,
   HttpClientModule,
   CommonModule,
+  NgbModule,
   TransferHttpCacheModule,
   NgtUniversalModule,
   FormsModule,
