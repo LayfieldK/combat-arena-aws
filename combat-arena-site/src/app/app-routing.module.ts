@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SplashComponent } from './splash/splash.component';
 import { CombatantsComponent } from './combatants/combatants.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CombatantDetailComponent } from './combatant-detail/combatant-detail.component';
@@ -13,7 +14,8 @@ import { CombatantDetailComponent } from './combatant-detail/combatant-detail.co
 @NgModule({
  imports: [
    RouterModule.forRoot([
-     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+     { path: '', redirectTo: '/splash', pathMatch: 'full' },
+     { path: 'splash', component: SplashComponent },
      { path: 'combatants', component: CombatantsComponent },
      { path: 'dashboard', component: DashboardComponent },
      { path: 'detail/:id', component: CombatantDetailComponent },

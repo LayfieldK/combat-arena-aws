@@ -17,6 +17,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CombatantSearchComponent } from './combatant-search/combatant-search.component';
+import { SplashComponent } from './splash/splash.component';
 
 @NgModule({
 declarations: [
@@ -25,7 +26,8 @@ declarations: [
   CombatantDetailComponent,
   MessagesComponent,
   DashboardComponent,
-  CombatantSearchComponent
+  CombatantSearchComponent,
+  SplashComponent
 ],
 imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
