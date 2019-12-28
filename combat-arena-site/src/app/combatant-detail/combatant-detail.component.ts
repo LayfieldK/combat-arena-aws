@@ -8,7 +8,7 @@ import { CombatantService } from '../combatant.service';
 @Component({
   selector: 'app-combatant-detail',
   templateUrl: './combatant-detail.component.html',
-  styleUrls: ['./combatant-detail.component.css']
+  styleUrls: ['./combatant-detail.component.scss']
 })
 export class CombatantDetailComponent implements OnInit {
 

@@ -9,7 +9,7 @@ import { CombatantService } from '../combatant.service';
 @Component({
   selector: 'app-combatant-search',
   templateUrl: './combatant-search.component.html',
-  styleUrls: [ './combatant-search.component.css' ]
+  styleUrls: [ './combatant-search.component.scss' ]
 })
 export class CombatantSearchComponent implements OnInit {
   combatants$: Observable<Combatant[]>;

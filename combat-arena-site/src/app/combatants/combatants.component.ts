@@ -6,7 +6,7 @@ import { CombatantService } from '../combatant.service';
 @Component({
   selector: 'app-combatants',
   templateUrl: './combatants.component.html',
-  styleUrls: ['./combatants.component.css']
+  styleUrls: ['./combatants.component.scss']
 })
 export class CombatantsComponent implements OnInit {
   combatants: Combatant[];
