@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SplashComponent } from './splash/splash.component';
 import { CombatantsComponent } from './combatants/combatants.component';
+import { BattlesComponent } from './battles/battles.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CombatantDetailComponent } from './combatant-detail/combatant-detail.component';
 
@@ -17,6 +18,7 @@ import { CombatantDetailComponent } from './combatant-detail/combatant-detail.co
      { path: '', redirectTo: '/splash', pathMatch: 'full' },
      { path: 'splash', component: SplashComponent },
      { path: 'combatants', component: CombatantsComponent },
+     { path: 'battles', component: BattlesComponent },
      { path: 'dashboard', component: DashboardComponent },
      { path: 'detail/:id', component: CombatantDetailComponent },
    ])

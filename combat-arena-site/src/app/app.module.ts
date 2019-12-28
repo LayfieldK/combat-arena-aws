@@ -18,6 +18,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CombatantSearchComponent } from './combatant-search/combatant-search.component';
 import { SplashComponent } from './splash/splash.component';
+import { BattlesComponent } from './battles/battles.component';
 
 @NgModule({
 declarations: [
@@ -27,7 +28,8 @@ declarations: [
   MessagesComponent,
   DashboardComponent,
   CombatantSearchComponent,
-  SplashComponent
+  SplashComponent,
+  BattlesComponent
 ],
 imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),
