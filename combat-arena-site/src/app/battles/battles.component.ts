@@ -18,11 +18,11 @@ export class BattlesComponent implements OnInit {
     this.getBattles();
   }
 
-  async getBattles(): Promise<Battle[]> {
-    const battles = await this.battleService.getBattles().toPromise();
-    this.battles = battles;
-    if (!this.selectedBattle && battles.length > 0) { this.selectedBattle = battles[0]; }
-    return battles;
+  getBattles(): void {
+    this.battleService.getBattles().subscribe(result => {
+      this.battles = result;
+      if (!this.selectedBattle && result.length > 0) { this.selectedBattle = result[0]; }
+    });
   }
 
   listClick(newValue: Battle) {
