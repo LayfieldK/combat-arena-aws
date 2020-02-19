@@ -43,7 +43,7 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "bundle": "webpack",
-    "deploy": "npm run build && webpack && serverless deploy"
+    "deploy": "npm run build && serverless deploy"
   },
   "repository": {
     "type": "git",
