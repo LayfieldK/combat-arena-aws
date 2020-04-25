@@ -1,3 +1,7 @@
+Note for self:
+
+If you deploy this and only the main request works, and the others are 403 forbidden, check the paths on those requests.  If they are missing the stage (dev), that's why.  When this happened to me before, it's because I was building the site in production mode.  I think the "/dev/" part of the path is coming from the base href property being set in the /environments/[environment.prod.ts/environment.serverless.ts/environment.ts]
+
 # CombatArenaSite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
