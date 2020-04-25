@@ -15,13 +15,15 @@ import { CombatantDetailComponent } from './combatant-detail/combatant-detail.co
 @NgModule({
  imports: [
    RouterModule.forRoot([
-     { path: '', redirectTo: '/splash', pathMatch: 'full' },
-     { path: 'splash', component: SplashComponent },
-     { path: 'combatants', component: CombatantsComponent },
-     { path: 'battles', component: BattlesComponent },
-     { path: 'dashboard', component: DashboardComponent },
-     { path: 'detail/:id', component: CombatantDetailComponent },
-   ])
+    { path: '', redirectTo: '/splash', pathMatch: 'full' },
+    { path: 'splash', component: SplashComponent },
+    { path: 'combatants', component: CombatantsComponent },
+    { path: 'battles', component: BattlesComponent },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'detail/:id', component: CombatantDetailComponent },
+], {
+    initialNavigation: 'enabled'
+})
  ],
  exports: [ RouterModule ]
 })
