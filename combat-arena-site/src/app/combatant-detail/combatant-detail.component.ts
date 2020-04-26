@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Combatant } from '../types/combatant';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Guid } from 'guid-ts';
 
 import { CombatantService } from '../combatant.service';
 
@@ -24,8 +25,8 @@ export class CombatantDetailComponent implements OnInit {
   }
 
   getCombatant(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.combatantService.getCombatant(id)
+    const id = new Guid(this.route.snapshot.paramMap.get('id'));
+    this.combatantService.getCombatant(id.toString())
       .subscribe(combatant => this.combatant = combatant);
   }
 

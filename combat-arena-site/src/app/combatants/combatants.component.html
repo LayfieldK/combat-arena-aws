@@ -30,8 +30,8 @@
                     <p class="card-text">{{combatant.name}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <button type="button" routerLink="/detail/{{combatant.id}}" class="btn btn-sm btn-outline-secondary">View</button>
-                            <button type="button" routerLink="/detail/{{combatant.id}}" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            <button type="button" routerLink="/detail/{{combatant.id.toString()}}" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" routerLink="/detail/{{combatant.id.toString()}}" class="btn btn-sm btn-outline-secondary">Edit</button>
                             <button class="btn btn-sm btn-outline-secondary" title="delete combatant"
                                 (click)="delete(combatant)">x</button>
                         </div>

@@ -1,7 +1,7 @@
 import { Combatant } from './combatant';
 
 export class Team {
-    id: number;
+    id: string;
     name: string;
     combatants: Combatant[];
   }

@@ -1,7 +1,7 @@
 import { Team } from './team';
 
 export class TournamentMatch {
-    id: number;
+    id: string;
     teams: Team[];
     victor: Team;
   }

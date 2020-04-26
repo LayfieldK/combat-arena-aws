@@ -5,6 +5,7 @@ import { Combatant } from './types/combatant';
 import { COMBATANTS } from './mock-combatants';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
+import { Guid } from 'guid-ts';
 
 @Injectable({
   providedIn: 'root'
@@ -30,19 +31,19 @@ export class CombatantService {
       );
   }
 
-  getCombatant(id: number): Observable<Combatant> {
+  getCombatant(id: string): Observable<Combatant> {
     // return of(COMBATANTS.find(combatant => combatant.id === id));
-    const url = `${this.combatantsUrl}/${id}`;
+    const url = `${this.combatantsUrl}/${id.toString()}`;
     return this.http.get<Combatant>(url).pipe(
-      tap(_ => this.log(`fetched combatant id=${id}`)),
-      catchError(this.handleError<Combatant>(`getCombatant id=${id}`))
+      tap(_ => this.log(`fetched combatant id=${id.toString()}`)),
+      catchError(this.handleError<Combatant>(`getCombatant id=${id.toString()}`))
     );
   }
 
   /** POST: add a new combatant to the server */
   addCombatant(combatant: Combatant): Observable<Combatant> {
     return this.http.post<Combatant>(this.combatantsUrl, combatant, this.httpOptions).pipe(
-      tap((newCombatant: Combatant) => this.log(`added combatant w/ id=${newCombatant.id}`)),
+      tap((newCombatant: Combatant) => this.log(`added combatant w/ id=${newCombatant.id.toString()}`)),
       catchError(this.handleError<Combatant>('addCombatant'))
     );
   }
@@ -50,18 +51,18 @@ export class CombatantService {
   /** PUT: update the Combatant on the server */
   updateCombatant(combatant: Combatant): Observable<any> {
     return this.http.put(this.combatantsUrl, combatant, this.httpOptions).pipe(
-      tap(_ => this.log(`updated combatant id=${combatant.id}`)),
+      tap(_ => this.log(`updated combatant id=${combatant.id.toString()}`)),
       catchError(this.handleError<any>('updateCombatant'))
     );
   }
 
   /** DELETE: delete the combatant from the server */
-  deleteCombatant(combatant: Combatant | number): Observable<Combatant> {
-    const id = typeof combatant === 'number' ? combatant : combatant.id;
-    const url = `${this.combatantsUrl}/${id}`;
+  deleteCombatant(combatant: Combatant | string): Observable<Combatant> {
+    const id = typeof combatant === 'string' ? combatant : combatant.id;
+    const url = `${this.combatantsUrl}/${id.toString()}`;
 
     return this.http.delete<Combatant>(url, this.httpOptions).pipe(
-      tap(_ => this.log(`deleted combatant id=${id}`)),
+      tap(_ => this.log(`deleted combatant id=${id.toString()}`)),
       catchError(this.handleError<Combatant>('deleteCombatant'))
     );
   }

@@ -1,6 +1,6 @@
 import { TournamentMatch } from './tournamentMatch';
 
 export class TournamentRound {
-    id: number;
+    id: string;
     matches: TournamentMatch[];
   }

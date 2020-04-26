@@ -1,4 +1,5 @@
+
 export class Combatant {
-    id: number;
+    id: string;
     name: string;
   }
