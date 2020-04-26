@@ -10,6 +10,7 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { CombatantsComponent } from './combatants/combatants.component';
 import { CombatantDetailComponent } from './combatant-detail/combatant-detail.component';
+import { TournamentsComponent } from './tournaments/tournaments.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -18,18 +19,17 @@ import { InMemoryDataService } from './in-memory-data.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CombatantSearchComponent } from './combatant-search/combatant-search.component';
 import { SplashComponent } from './splash/splash.component';
-import { BattlesComponent } from './battles/battles.component';
 
 @NgModule({
 declarations: [
   AppComponent,
   CombatantsComponent,
   CombatantDetailComponent,
+  TournamentsComponent,
   MessagesComponent,
   DashboardComponent,
   CombatantSearchComponent,
-  SplashComponent,
-  BattlesComponent
+  SplashComponent
 ],
 imports: [
   BrowserModule.withServerTransition({ appId: 'serverApp' }),

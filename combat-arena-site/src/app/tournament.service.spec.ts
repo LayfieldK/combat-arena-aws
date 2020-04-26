@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { BattleService } from './battle.service';
+import { TournamentService } from './tournament.service';
 
-describe('BattleService', () => {
+describe('TournamentService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: BattleService = TestBed.get(BattleService);
+    const service: TournamentService = TestBed.get(TournamentService);
     expect(service).toBeTruthy();
   });
 });

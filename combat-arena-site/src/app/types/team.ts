@@ -1,8 +1,7 @@
 import { Combatant } from './combatant';
 
-export class Battle {
+export class Team {
     id: number;
     name: string;
     combatants: Combatant[];
-    winningTeamId: number;
   }
