@@ -34,10 +34,7 @@ export class CombatantService {
   getCombatant(id: string): Observable<Combatant> {
     // return of(COMBATANTS.find(combatant => combatant.id === id));
     const url = `${this.combatantsUrl}/${id.toString()}`;
-    return this.http.get<Combatant>(url).pipe(
-      tap(_ => this.log(`fetched combatant id=${id.toString()}`)),
-      catchError(this.handleError<Combatant>(`getCombatant id=${id.toString()}`))
-    );
+    return this.http.get<Combatant>(url);
   }
 
   /** POST: add a new combatant to the server */
