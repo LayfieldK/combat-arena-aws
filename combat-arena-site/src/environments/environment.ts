@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-	baseHref: '/dev/'
+  baseHref: '/dev/',
+  apiUrl: 'https://69cg2exh57.execute-api.us-east-1.amazonaws.com/dev/'
 };
 
 /*

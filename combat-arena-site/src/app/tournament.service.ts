@@ -4,13 +4,14 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { Tournament } from './types/tournament';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TournamentService {
 
-  private tournamentsUrl = 'api/tournaments';  // URL to web api
+  private tournamentsUrl = environment.apiUrl + '/graphql';  // URL to web api
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -21,11 +22,11 @@ export class TournamentService {
 
   /** GET tournaments from the server */
   getTournaments(): Observable<Tournament[]> {
-    return this.http.get<Tournament[]>(this.tournamentsUrl)
-      .pipe(
-        tap(_ => this.log('fetched tournaments')),
-        catchError(this.handleError<Tournament[]>('getTournaments', []))
-      );
+    return this.http.get<Tournament[]>(this.tournamentsUrl).pipe(
+      map((data: Tournament[]) => {
+        return data;
+      })
+    );
   }
 
   getTournament(id: number): Observable<Tournament> {
