@@ -11,7 +11,7 @@ import { environment } from '../environments/environment';
 })
 export class TournamentService {
 
-  private tournamentsUrl = environment.apiUrl + '/graphql';  // URL to web api
+  private tournamentsUrl = environment.apiUrl + 'graphql';  // URL to web api
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
