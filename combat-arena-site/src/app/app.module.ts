@@ -19,6 +19,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CombatantSearchComponent } from './combatant-search/combatant-search.component';
 import { SplashComponent } from './splash/splash.component';
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
 declarations: [
@@ -40,6 +41,7 @@ imports: [
   TransferHttpCacheModule,
   NgtUniversalModule,
   FormsModule,
+  GraphQLModule
   // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
   // and returns simulated server responses.
   // Remove it when a real server is ready to receive requests.
