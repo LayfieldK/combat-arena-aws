@@ -30,6 +30,7 @@ export class TournamentsComponent implements OnInit {
         {
           tournaments(numberOfRecentTournaments: 5) {
             id
+            date
             teams {
               id
               name

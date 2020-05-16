@@ -7,4 +7,5 @@ export class Tournament {
     teams: Team[];
     rounds: TournamentRound[];
     victor: Team;
+    date: Date;
   }
