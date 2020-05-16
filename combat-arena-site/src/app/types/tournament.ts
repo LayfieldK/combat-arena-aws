@@ -6,4 +6,5 @@ export class Tournament {
     name: string;
     teams: Team[];
     rounds: TournamentRound[];
+    victor: Team;
   }
