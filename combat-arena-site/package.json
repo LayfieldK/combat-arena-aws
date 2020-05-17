@@ -17,7 +17,7 @@
     "build:browser:serverless:dev": "ng build --base-href /dev/",
     "build:serverless": "npm run build:browser:serverless && npm run build:server:serverless",
     "build:prod:deploy": "npm run build:prod && npm run deploy",
-    "build:serverless:deploy": "npm run build:ssr && npm run deploy",
+    "build:serverless:deploy": "npm run build:ssr:prod && npm run deploy",
     "deploy": "serverless deploy",
     "build:server:prod": "ng run combat-arena-site:server && webpack --progress --colors",
     "build:server:serverless": "ng run combat-arena-site:server:serverless && webpack --progress --colors",
